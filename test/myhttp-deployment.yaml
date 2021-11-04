@@ -2,16 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myhttp-deployment
+  namespace: testapp
+  labels:
+    app: myhttp
 spec:
   selector:
-    matchlabels:
+    matchLabels:
       app: myhttp
-    replicas: 2
-    template:
-      metadata:
-        labels:
-          app: myhttp
-      spec:
-        containers:
-        - name: myhttp
-          image: raj/myhttp-image
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myhttp
+    spec:
+      containers:
+      - name: myhttp
+        image: httpd
