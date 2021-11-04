@@ -9,6 +9,7 @@ spec:
   source:
     repoURL: https://github.com/rajcsingh-git/test-argo.git
     targetRevision: HEAD
+    path: .
 
   destination:
     server: https://kubernetes.default.svc
