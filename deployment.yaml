@@ -14,4 +14,4 @@ spec:
       spec:
         containers:
         - name: myhttp
-          image: raj/myhttp-image
+          image: raj/myhttp-image:01
